@@ -10,7 +10,6 @@ const forecast = (latitude,longitude, callback) =>{
          } else if(body.message) {
              callback('unable to result for this location. try for another',undefined)
          } else{
-             console.log(body)
              callback(undefined, 'Weather main condition is '+ body.weather[0].main +'.'+' There is min tempreture is ' + body.main.temp_min +' and high tempreture '+body.main.temp_max +'.'+' Pressure is ' + body.main.pressure +' and the wind speed is ' + body.wind.speed+'.')
          }
     })
